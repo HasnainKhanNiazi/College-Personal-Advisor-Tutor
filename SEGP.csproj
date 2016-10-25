@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7473099-8A94-4F93-AE96-C724B8F8D740}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEGP</RootNamespace>
+    <AssemblyName>SEGP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.Xpf.Core.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.Printing.v16.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.3.0.0\lib\net35-Client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataOperations.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FullLoad.Designer.cs">
+      <DependentUpon>FullLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InsertStudents.Designer.cs">
+      <DependentUpon>InsertStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTeachers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InsertTeachers.Designer.cs">
+      <DependentUpon>InsertTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginNaeem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginNaeem.Designer.cs">
+      <DependentUpon>LoginNaeem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailClass.cs" />
+    <Compile Include="PartialTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartialTeacher.Designer.cs">
+      <DependentUpon>PartialTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SendMail.Designer.cs">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentEdit.designer.cs">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeacherEdit.designer.cs">
+      <DependentUpon>TeacherEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Year1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Year1.Designer.cs">
+      <DependentUpon>Year1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Year2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Year2.Designer.cs">
+      <DependentUpon>Year2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Year3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Year3.Designer.cs">
+      <DependentUpon>Year3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Year4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Year4.Designer.cs">
+      <DependentUpon>Year4.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullLoad.resx">
+      <DependentUpon>FullLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertStudents.resx">
+      <DependentUpon>InsertStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTeachers.resx">
+      <DependentUpon>InsertTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginNaeem.resx">
+      <DependentUpon>LoginNaeem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartialTeacher.resx">
+      <DependentUpon>PartialTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMail.resx">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEdit.resx">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherEdit.resx">
+      <DependentUpon>TeacherEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Year1.resx">
+      <DependentUpon>Year1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Year2.resx">
+      <DependentUpon>Year2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Year3.resx">
+      <DependentUpon>Year3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Year4.resx">
+      <DependentUpon>Year4.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghani1457467_1394185500819750_707491040_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naeem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shoaib.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mohsin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hhh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents Library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File - Google Docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple_background_by_hexdef101-d7x7rup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows 8 Messaging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange-Box-Background-Vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messaging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usericon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Namal_College_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0861.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7003091-hot-air-balloon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
