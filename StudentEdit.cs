@@ -8,12 +8,13 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace SEGP
 {
     public partial class StudentEdit : DevExpress.XtraEditors.XtraUserControl
     {
-        String olduob, oldname, oldfather, oldemail, oldcontact, oldyear, oldprograme;
+        String olduob, oldname, oldfather, oldemail, oldcontact, oldyear, oldprograme,oldPAT;
         static String connectionString = "Server=localhost; Database=segp; Uid=root; pwd=";
         MySqlConnection conn = new MySqlConnection(connectionString);
 
@@ -44,33 +45,74 @@ namespace SEGP
             String contact = textBox5.Text;
             String Year = textBox6.Text;
             String Programme = textBox7.Text;
-            MySqlCommand command = new MySqlCommand();
-            try
+            String NewPAT = textBox9.Text;
+            var validatorUoB = new Regex("^1[0-9]{7}$");
+            var validatorEmail = new Regex("^([a-z]+[0-9]+[@]{1}namal.edu.pk)$");
+            var validatorContact = new Regex("^[0-9]{4}-[0-9]{7}$");
+            var validatorYear = new Regex("^Year-[1-4]{1}$");
+            if (validatorUoB.IsMatch(Uob) && validatorYear.IsMatch(Year) && validatorEmail.IsMatch(Email) && validatorContact.IsMatch(contact))
             {
-                conn.Open();
-                command = conn.CreateCommand();
-                command.CommandText = "Update Students SET UoB='" + Uob + "',Name='" + Name + "',FatherName='" + Fname + "',Programme='" + Programme + "',EmailAddress='" + Email + "',Contact='" + contact + "',Year='" + Year + "' where Name='" + oldname + "' AND FatherName='" + oldfather + "' AND Programme='" + oldprograme + "' AND EmailAddress='" + oldemail + "' AND Contact='" + oldcontact + "' AND Year='" + oldyear + "'    ";
-                command.ExecuteNonQuery();
-                conn.Close();
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
-                textBox7.Text = "";
-                textBox8.Text = "";
-                MessageBox.Show("Data Updated");
+                MySqlCommand command = new MySqlCommand();
+                try
+                {
+                    conn.Open();
+                    command = conn.CreateCommand();
+                    command.CommandText = "Update Students SET UoB='" + Uob + "',Name='" + Name + "',FatherName='" + Fname + "',Programme='" + Programme + "',EmailAddress='" + Email + "',Contact='" + contact + "',Year='" + Year + "',PAT='"+NewPAT+"' where Name='" + oldname + "' AND FatherName='" + oldfather + "' AND Programme='" + oldprograme + "' AND EmailAddress='" + oldemail + "' AND Contact='" + oldcontact + "' AND Year='" + oldyear + "'    ";
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox9.Text = "";
+                    MessageBox.Show("Data Updated");
+                }
+                catch (Exception a)
+                {
+                    MessageBox.Show("Something is Wrong " + a.ToString());
+                }   
             }
-            catch (Exception a)
+            else
             {
-                MessageBox.Show("Something is Wrong "+ a.ToString());
+                MessageBox.Show("Your Input is False");
             }
+            
+            
         }
 
-        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13)
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
+        }
+
+        private void textBox8_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
                 MySqlCommand command = new MySqlCommand();
                 try
@@ -84,29 +126,34 @@ namespace SEGP
                     MySqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        textBox1.Text = reader.GetString(0);
-                        textBox2.Text = reader.GetString(1);
-                        textBox3.Text = reader.GetString(2);
-                        textBox4.Text = reader.GetString(4);
-                        textBox5.Text = reader.GetString(5);
-                        textBox6.Text = reader.GetString(6);
-                        textBox7.Text = reader.GetString(3);
-                        olduob = reader.GetString(0);
-                        oldname = reader.GetString(1);
-                        oldfather = reader.GetString(2);
-                        oldemail = reader.GetString(4);
-                        oldcontact = reader.GetString(5);
-                        oldyear = reader.GetString(6);
-                        oldprograme = reader.GetString(3);
+                        textBox1.Text = reader.GetString(1);
+                        textBox2.Text = reader.GetString(2);
+                        textBox3.Text = reader.GetString(3);
+                        textBox4.Text = reader.GetString(5);
+                        textBox5.Text = reader.GetString(6);
+                        textBox6.Text = reader.GetString(7);
+                        textBox7.Text = reader.GetString(4);
+                        textBox9.Text = reader.GetString(9);
+                        olduob = reader.GetString(1);
+                        oldname = reader.GetString(2);
+                        oldfather = reader.GetString(3);
+                        oldemail = reader.GetString(5);
+                        oldcontact = reader.GetString(6);
+                        oldyear = reader.GetString(7);
+                        oldprograme = reader.GetString(4);
+                        oldPAT = reader.GetString(9);
                     }
                     conn.Close();
                 }
                 catch (Exception a)
                 {
-                    MessageBox.Show("Something is Wrong"+a.ToString());
+                    MessageBox.Show("Something is Wrong" + a.ToString());
                 }
+
+
             }
         }
+
 
     }
 }

@@ -45,19 +45,10 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame9 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame11 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame12 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.windowsUIView1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
@@ -83,9 +74,13 @@
             this.SendMail = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.MailPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
             this.sendMailDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.Creditstile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
+            this.Credits_P = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
+            this.CreditsDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.PAT = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.Help = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.Developer = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.ChatPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
+            this.insertDataManuallyDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsUIView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Student_Details_PG)).BeginInit();
@@ -110,9 +105,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.SendMail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MailPG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendMailDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Creditstile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Credits_P)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreditsDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PAT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Help)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Developer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insertDataManuallyDocument)).BeginInit();
             this.SuspendLayout();
             // 
             // documentManager1
@@ -131,7 +130,8 @@
             this.MailPG,
             this.EditInfo_PG,
             this.InserDataPG,
-            this.ChatPG});
+            this.ChatPG,
+            this.Credits_P});
             this.windowsUIView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.year2Document,
             this.year1Document,
@@ -143,15 +143,18 @@
             this.teacherEditDocument,
             this.sendMailDocument,
             this.insertTeachersDocument,
-            this.insertStudentsDocument});
+            this.insertStudentsDocument,
+            this.CreditsDocument,
+            this.insertDataManuallyDocument});
             this.windowsUIView1.Tiles.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile[] {
             this.Student_Details,
             this.Teacher_Details,
-            this.Developer,
             this.Help,
             this.Edit_Information,
             this.SendMail,
-            this.InsertData});
+            this.InsertData,
+            this.Creditstile,
+            this.PAT});
             // 
             // Student_Details_PG
             // 
@@ -195,10 +198,10 @@
             this.Edit_Information,
             this.InsertData,
             this.SendMail,
-            this.Help,
-            this.Developer});
+            this.Creditstile,
+            this.PAT,
+            this.Help});
             this.tileContainer1.Name = "tileContainer1";
-            this.tileContainer1.Position = 604;
             this.tileContainer1.Properties.AllowDragTilesBetweenGroups = DevExpress.Utils.DefaultBoolean.True;
             this.tileContainer1.Properties.AllowGroupHighlighting = DevExpress.Utils.DefaultBoolean.True;
             this.tileContainer1.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
@@ -209,23 +212,21 @@
             // Student_Details
             // 
             this.Student_Details.ActivationTarget = this.Student_Details_PG;
-            this.Student_Details.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
+            this.Student_Details.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
             this.Student_Details.Appearances.Normal.Options.UseBackColor = true;
             this.Student_Details.Enabled = true;
-            tileItemFrame1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
+            tileItemFrame1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(189)))), ((int)(((byte)(249)))));
             tileItemFrame1.Appearance.Options.UseBackColor = true;
-            tileItemElement1.Appearance.Hovered.BackColor = System.Drawing.Color.Navy;
-            tileItemElement1.Appearance.Hovered.Options.UseBackColor = true;
             tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileItemElement1.Appearance.Normal.Options.UseFont = true;
-            tileItemElement1.Image = global::SEGP.Properties.Resources.Documents_Library;
+            tileItemElement1.Image = global::SEGP.Properties.Resources.Untitled_1;
             tileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
             tileItemElement1.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
             tileItemElement1.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.None;
             tileItemElement1.Text = "<b>Student Details</b>";
             tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
             tileItemFrame1.Elements.Add(tileItemElement1);
-            tileItemFrame1.Image = global::SEGP.Properties.Resources.Documents_Library;
+            tileItemFrame1.Image = global::SEGP.Properties.Resources.Untitled_1;
             this.Student_Details.Frames.Add(tileItemFrame1);
             this.tileContainer1.SetID(this.Student_Details, 1);
             this.Student_Details.Name = "Student_Details";
@@ -276,15 +277,24 @@
             this.Edit_Information.ActivationTarget = this.EditInfo_PG;
             this.Edit_Information.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(82)))), ((int)(((byte)(157)))));
             this.Edit_Information.Appearances.Normal.Options.UseBackColor = true;
-            tileItemElement3.Appearance.Hovered.BackColor = System.Drawing.Color.Navy;
-            tileItemElement3.Appearance.Hovered.Options.UseBackColor = true;
+            tileItemFrame3.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
             tileItemElement3.Image = global::SEGP.Properties.Resources.EditInfo;
             tileItemElement3.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
             tileItemElement3.Text = "<b>Edit Information</b>";
             tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
             tileItemFrame3.Elements.Add(tileItemElement3);
             tileItemFrame3.Image = global::SEGP.Properties.Resources.EditInfo;
+            tileItemFrame4.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
+            tileItemFrame4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(174)))), ((int)(((byte)(218)))));
+            tileItemFrame4.Appearance.Options.UseBackColor = true;
+            tileItemElement4.Image = global::SEGP.Properties.Resources.Notepad;
+            tileItemElement4.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement4.Text = "<b>Edit Information</b>";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame4.Elements.Add(tileItemElement4);
+            tileItemFrame4.Image = global::SEGP.Properties.Resources.Notepad;
             this.Edit_Information.Frames.Add(tileItemFrame3);
+            this.Edit_Information.Frames.Add(tileItemFrame4);
             this.tileContainer1.SetID(this.Edit_Information, 3);
             this.Edit_Information.Name = "Edit_Information";
             this.Edit_Information.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
@@ -315,15 +325,24 @@
             this.InsertData.ActivationTarget = this.InserDataPG;
             this.InsertData.Appearances.Normal.BackColor = System.Drawing.Color.DimGray;
             this.InsertData.Appearances.Normal.Options.UseBackColor = true;
-            tileItemElement4.Appearance.Hovered.BackColor = System.Drawing.Color.Navy;
-            tileItemElement4.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement4.Image = global::SEGP.Properties.Resources.Add_Data;
-            tileItemElement4.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement4.Text = "<b>Insert Data</b>";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemFrame4.Elements.Add(tileItemElement4);
-            tileItemFrame4.Image = global::SEGP.Properties.Resources.Add_Data;
-            this.InsertData.Frames.Add(tileItemFrame4);
+            tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollLeft;
+            tileItemElement5.Image = global::SEGP.Properties.Resources.Add_Data;
+            tileItemElement5.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement5.Text = "<b>Insert Data</b>";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame5.Elements.Add(tileItemElement5);
+            tileItemFrame5.Image = global::SEGP.Properties.Resources.Add_Data;
+            tileItemFrame6.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
+            tileItemFrame6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(214)))));
+            tileItemFrame6.Appearance.Options.UseBackColor = true;
+            tileItemElement6.Image = global::SEGP.Properties.Resources.INsert;
+            tileItemElement6.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement6.Text = "<b>Insert Data</b>";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame6.Elements.Add(tileItemElement6);
+            tileItemFrame6.Image = global::SEGP.Properties.Resources.INsert;
+            this.InsertData.Frames.Add(tileItemFrame5);
+            this.InsertData.Frames.Add(tileItemFrame6);
             this.tileContainer1.SetID(this.InsertData, 3);
             this.InsertData.Name = "InsertData";
             this.InsertData.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
@@ -332,6 +351,7 @@
             // InserDataPG
             // 
             this.InserDataPG.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
+            this.insertDataManuallyDocument,
             this.insertTeachersDocument,
             this.insertStudentsDocument});
             this.InserDataPG.Name = "InserDataPG";
@@ -354,24 +374,22 @@
             this.SendMail.ActivationTarget = this.MailPG;
             this.SendMail.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
             this.SendMail.Appearances.Normal.Options.UseBackColor = true;
-            tileItemElement5.Appearance.Hovered.BackColor = System.Drawing.Color.Navy;
-            tileItemElement5.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement5.Image = global::SEGP.Properties.Resources.Mail_alt;
-            tileItemElement5.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement5.Text = "<b>Mail</b>";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemFrame5.Elements.Add(tileItemElement5);
-            tileItemFrame5.Image = global::SEGP.Properties.Resources.Mail_alt;
-            tileItemFrame6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(236)))));
-            tileItemFrame6.Appearance.Options.UseBackColor = true;
-            tileItemElement6.Image = global::SEGP.Properties.Resources.Mail;
-            tileItemElement6.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement6.Text = "<b> Mail</b>";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemFrame6.Elements.Add(tileItemElement6);
-            tileItemFrame6.Image = global::SEGP.Properties.Resources.Mail;
-            this.SendMail.Frames.Add(tileItemFrame5);
-            this.SendMail.Frames.Add(tileItemFrame6);
+            tileItemElement7.Image = global::SEGP.Properties.Resources.Mail_alt;
+            tileItemElement7.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement7.Text = "<b>Mail</b>";
+            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame7.Elements.Add(tileItemElement7);
+            tileItemFrame7.Image = global::SEGP.Properties.Resources.Mail_alt;
+            tileItemFrame8.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(236)))));
+            tileItemFrame8.Appearance.Options.UseBackColor = true;
+            tileItemElement8.Image = global::SEGP.Properties.Resources.Mail;
+            tileItemElement8.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement8.Text = "<b> Mail</b>";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame8.Elements.Add(tileItemElement8);
+            tileItemFrame8.Image = global::SEGP.Properties.Resources.Mail;
+            this.SendMail.Frames.Add(tileItemFrame7);
+            this.SendMail.Frames.Add(tileItemFrame8);
             this.tileContainer1.SetID(this.SendMail, 3);
             this.SendMail.Name = "SendMail";
             this.SendMail.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
@@ -389,96 +407,68 @@
             this.sendMailDocument.ControlName = "SendMail";
             this.sendMailDocument.ControlTypeName = "SEGP.SendMail";
             // 
+            // Creditstile
+            // 
+            this.Creditstile.ActivationTarget = this.Credits_P;
+            this.Creditstile.Document = this.CreditsDocument;
+            this.tileContainer1.SetID(this.Creditstile, 6);
+            this.Creditstile.Name = "Creditstile";
+            this.Creditstile.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            // 
+            // Credits_P
+            // 
+            this.Credits_P.Document = this.CreditsDocument;
+            this.Credits_P.Name = "Credits_P";
+            this.Credits_P.Parent = this.tileContainer1;
+            // 
+            // CreditsDocument
+            // 
+            this.CreditsDocument.Caption = "Credits";
+            this.CreditsDocument.ControlName = "Credits";
+            // 
+            // PAT
+            // 
+            tileItemElement9.Text = "<b>PAT Assign</b>";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame9.Elements.Add(tileItemElement9);
+            this.PAT.Frames.Add(tileItemFrame9);
+            this.tileContainer1.SetID(this.PAT, 7);
+            this.PAT.Name = "PAT";
+            this.PAT.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            this.PAT.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            this.PAT.Click += new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileClickEventHandler(this.PAT_Click);
+            // 
             // Help
             // 
             this.Help.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(88)))), ((int)(((byte)(183)))));
             this.Help.Appearances.Normal.Options.UseBackColor = true;
-            tileItemFrame7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(88)))), ((int)(((byte)(183)))));
-            tileItemFrame7.Appearance.Options.UseBackColor = true;
-            tileItemElement7.Appearance.Hovered.BackColor = System.Drawing.Color.Navy;
-            tileItemElement7.Appearance.Hovered.Options.UseBackColor = true;
-            tileItemElement7.Image = global::SEGP.Properties.Resources.Help;
-            tileItemElement7.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement7.Text = "<b>Help</b>";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemFrame7.Elements.Add(tileItemElement7);
-            tileItemFrame7.Image = global::SEGP.Properties.Resources.Help;
-            this.Help.Frames.Add(tileItemFrame7);
+            tileItemFrame10.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(88)))), ((int)(((byte)(183)))));
+            tileItemFrame10.Appearance.Options.UseBackColor = true;
+            tileItemElement10.Image = global::SEGP.Properties.Resources.Help;
+            tileItemElement10.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement10.Text = "<b>Help</b>";
+            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame10.Elements.Add(tileItemElement10);
+            tileItemFrame10.Image = global::SEGP.Properties.Resources.Help;
+            this.Help.Frames.Add(tileItemFrame10);
             this.tileContainer1.SetID(this.Help, 2);
             this.Help.Name = "Help";
             this.Help.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
             this.Help.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.Help.Visible = true;
-            // 
-            // Developer
-            // 
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement8.ImageLocation = new System.Drawing.Point(15, -20);
-            tileItemElement8.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
-            tileItemElement8.Text = "<b>Muhammad Hasnain Khan</b><br><b>0322896223</b>";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
-            tileItemElement9.Text = "<b><i>Developers are here ...</b>";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemFrame8.Elements.Add(tileItemElement8);
-            tileItemFrame8.Elements.Add(tileItemElement9);
-            tileItemFrame8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame8.Image")));
-            tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
-            tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement10.ImageLocation = new System.Drawing.Point(30, -50);
-            tileItemElement10.Text = "<b>Mohsin Ahmad Khan</b><br><b>03425514445</b>";
-            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
-            tileItemElement11.Text = "<b>Developers are here..</b>";
-            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemFrame9.Elements.Add(tileItemElement10);
-            tileItemFrame9.Elements.Add(tileItemElement11);
-            tileItemFrame9.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame9.Image")));
-            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement12.ImageLocation = new System.Drawing.Point(20, -70);
-            tileItemElement12.Text = "<b>Muhammad Shoaib Khan<br>03006088706</b>";
-            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
-            tileItemElement13.Text = "<b>Developers are here...</b>";
-            tileItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemFrame10.Elements.Add(tileItemElement12);
-            tileItemFrame10.Elements.Add(tileItemElement13);
-            tileItemFrame10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame10.Image")));
-            tileItemElement14.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement14.Image")));
-            tileItemElement14.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement14.ImageLocation = new System.Drawing.Point(15, -25);
-            tileItemElement14.Text = "<b>Naeem Rashid<br>03117926196</b>";
-            tileItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
-            tileItemElement15.Text = "<b>Developers are here...</b>";
-            tileItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemFrame11.Elements.Add(tileItemElement14);
-            tileItemFrame11.Elements.Add(tileItemElement15);
-            tileItemFrame11.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame11.Image")));
-            tileItemElement16.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement16.Image")));
-            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement16.Text = "<b>Muhammad Usman Ghani<br>03111741230</b>";
-            tileItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
-            tileItemElement17.Text = "<b>Developers are here...</b>";
-            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemFrame12.Elements.Add(tileItemElement16);
-            tileItemFrame12.Elements.Add(tileItemElement17);
-            tileItemFrame12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame12.Image")));
-            this.Developer.Frames.Add(tileItemFrame8);
-            this.Developer.Frames.Add(tileItemFrame9);
-            this.Developer.Frames.Add(tileItemFrame10);
-            this.Developer.Frames.Add(tileItemFrame11);
-            this.Developer.Frames.Add(tileItemFrame12);
-            this.tileContainer1.SetID(this.Developer, 6);
-            this.Developer.Name = "Developer";
-            this.Developer.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
-            this.Developer.Properties.FrameAnimationInterval = 3000;
-            this.Developer.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.Developer.Visible = true;
+            this.Help.Click += new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileClickEventHandler(this.Help_Click);
             // 
             // ChatPG
             // 
             this.ChatPG.Document = null;
             this.ChatPG.Name = "ChatPG";
             this.ChatPG.Parent = this.tileContainer1;
+            // 
+            // insertDataManuallyDocument
+            // 
+            this.insertDataManuallyDocument.Caption = "InsertManually";
+            this.insertDataManuallyDocument.ControlName = "InsertDataManually";
+            this.insertDataManuallyDocument.ControlTypeName = "SEGP.InsertDataManually";
             // 
             // Form1
             // 
@@ -516,9 +506,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.SendMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MailPG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendMailDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Creditstile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Credits_P)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreditsDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PAT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Help)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Developer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insertDataManuallyDocument)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,7 +532,6 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup Teacher_Details_PG;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document fullLoadDocument;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document partialTeacherDocument;
-        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile Developer;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile Help;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page MailPG;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup EditInfo_PG;
@@ -552,6 +545,11 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document insertTeachersDocument;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document insertStudentsDocument;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page ChatPG;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile Creditstile;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page Credits_P;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document CreditsDocument;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile PAT;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document insertDataManuallyDocument;
 
     }
 }

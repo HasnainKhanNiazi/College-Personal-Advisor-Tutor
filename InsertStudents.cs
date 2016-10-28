@@ -15,8 +15,9 @@ namespace SEGP
     public partial class InsertStudents : DevExpress.XtraEditors.XtraUserControl
     {
         static String connectionString = "Server=localhost; Database=segp; Uid=root; pwd=";
-        MySqlConnection conn = new MySqlConnection(connectionString);
+        MySqlConnection conn1 = new MySqlConnection(connectionString);
         MySqlCommand mysqlcommand;
+        String FilePath;
 
         public InsertStudents()
         {
@@ -28,30 +29,21 @@ namespace SEGP
             OpenFileDialog opd = new OpenFileDialog();
             if (opd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                Browsetxt.Text = opd.FileName;
-            }
-        }
+                FilePath = opd.FileName;
 
-        private void LoadSheetbtn_Click(object sender, EventArgs e)
-        {
-            gggbackend.DataSource = null;
-            ggg.DataSource = null;
-            ggg1.Columns.Clear();
-            String path = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Browsetxt.Text + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
-            OleDbConnection conn = new OleDbConnection(path);
-            OleDbDataAdapter adapter = new OleDbDataAdapter("select * from [" + Sheettxt.Text + "$]", conn);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            ggg.DataSource = dt;
-            gggbackend.DataSource = dt;
-        }
+                gggbackend.DataSource = null;
+                String path = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
+                OleDbConnection conn = new OleDbConnection(path);
+                String Sheet = "Sheet2";
+                OleDbDataAdapter adapter = new OleDbDataAdapter("select * from [" + Sheet + "$]", conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                gggbackend.DataSource = dt;
 
-        private void Save_Click(object sender, EventArgs e)
-        {
-            mysqlcommand = conn.CreateCommand();
-            conn.Open();
-            for (int i = 0; i < gggbackend.Rows.Count; i++)
-            {
+                mysqlcommand = conn1.CreateCommand();
+                conn1.Open();
+                for (int i = 0; i < gggbackend.Rows.Count; i++)
+                {
                     String ub = gggbackend.Rows[i].Cells["UoB"].Value.ToString();
                     String name = gggbackend.Rows[i].Cells["Name"].Value.ToString();
                     String father_name = gggbackend.Rows[i].Cells["Father Name"].Value.ToString();
@@ -59,8 +51,9 @@ namespace SEGP
                     String email = gggbackend.Rows[i].Cells["Email Address"].Value.ToString();
                     String contact = gggbackend.Rows[i].Cells["contact"].Value.ToString();
                     String Year = gggbackend.Rows[i].Cells["Year"].Value.ToString();
+                    String PAT = gggbackend.Rows[i].Cells["PAT"].Value.ToString();
 
-                    mysqlcommand.CommandText = "insert into students set UoB='" + ub + "',Name='" + name + "',Fathername='" + father_name + "',Programme='" + programme + "',Emailaddress = '" + email + "',Contact='" + contact + "',Year='" + Year + "' ";
+                    mysqlcommand.CommandText = "insert into students set UoB='" + ub + "',Name='" + name + "',Fathername='" + father_name + "',Programme='" + programme + "',Emailaddress = '" + email + "',Contact='" + contact + "',Year='" + Year + "', PAT='"+PAT+"'";
                     try
                     {
                         mysqlcommand.ExecuteNonQuery();
@@ -70,60 +63,74 @@ namespace SEGP
                         MessageBox.Show("something is wrong" + a.ToString());
                     }
                 }
-                conn.Close();
-                MessageBox.Show("data inserted");
+                conn1.Close();
+                MessageBox.Show("Data inserted");
+
+
             }
-
-        private void OneStd_Click(object sender, EventArgs e)
-        {
-            PanelManualStd.Visible = true;
         }
 
-        private void InsertStudents_Click(object sender, EventArgs e)
+        private void panel1_DragEnter(object sender, DragEventArgs e)
         {
-            PanelManualStd.Visible = false;
-        }
-
-        private void Clearmanstd_Click(object sender, EventArgs e)
-        {
-            UobStdManul.Text = "";
-            NameStdManul.Text = "";
-            FatherStdManul.Text = "";
-            ProgrameStdManul.Text = "";
-            EmailStdManul.Text = "";
-            ContactStdManul.Text = "";
-            YearStdManul.Text = "";
-        }
-
-        private void INsertManstd_Click(object sender, EventArgs e)
-        {
-            try
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
             {
-                String Ub = UobStdManul.Text;
-                String Name = NameStdManul.Text;
-                String FatherName = FatherStdManul.Text;
-                String Programme = ProgrameStdManul.Text;
-                String Email = EmailStdManul.Text;
-                String Contact = ContactStdManul.Text;
-                String Year = YearStdManul.Text;
-                UobStdManul.Text = "";
-                NameStdManul.Text = "";
-                FatherStdManul.Text = "";
-                ProgrameStdManul.Text = "";
-                EmailStdManul.Text = "";
-                ContactStdManul.Text = "";
-                YearStdManul.Text = "";
-
-                mysqlcommand = conn.CreateCommand();
-                conn.Open();
-                mysqlcommand.CommandText = "insert into Students set UoB='" + Ub + "',Name='" + Name + "',Fathername='" + FatherName + "',Programme='" + Programme + "',Emailaddress = '" + Email + "',Contact='" + Contact + "',Year='" + Year + "' ";
-                MessageBox.Show("Data Inserted");
-                conn.Close();
-            }
-            catch (Exception a)
-            {
-                MessageBox.Show("Something is Wrong"+a.ToString());
+                e.Effect = DragDropEffects.Move;
+                e.Effect = DragDropEffects.All;
             }
         }
+
+        private void panel1_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string filePath in files)
+                {
+                    FilePath = filePath;
+
+                    //start
+
+                    gggbackend.DataSource = null;
+                    String path = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
+                    OleDbConnection conn = new OleDbConnection(path);
+                    String Sheet = "Sheet2";
+                    OleDbDataAdapter adapter = new OleDbDataAdapter("select * from [" + Sheet + "$]", conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    gggbackend.DataSource = dt;
+
+                    mysqlcommand = conn1.CreateCommand();
+                    conn1.Open();
+                    for (int i = 0; i < gggbackend.Rows.Count; i++)
+                    {
+                        String ub = gggbackend.Rows[i].Cells["UoB"].Value.ToString();
+                        String name = gggbackend.Rows[i].Cells["Name"].Value.ToString();
+                        String father_name = gggbackend.Rows[i].Cells["Father Name"].Value.ToString();
+                        String programme = gggbackend.Rows[i].Cells["Programme"].Value.ToString();
+                        String email = gggbackend.Rows[i].Cells["Email Address"].Value.ToString();
+                        String contact = gggbackend.Rows[i].Cells["contact"].Value.ToString();
+                        String Year = gggbackend.Rows[i].Cells["Year"].Value.ToString();
+                        String PAT = gggbackend.Rows[i].Cells["PAT"].Value.ToString();
+
+                        mysqlcommand.CommandText = "insert into students set UoB='" + ub + "',Name='" + name + "',Fathername='" + father_name + "',Programme='" + programme + "',Emailaddress = '" + email + "',Contact='" + contact + "',Year='" + Year + "',PAT='"+PAT+"' ";
+                        try
+                        {
+                            mysqlcommand.ExecuteNonQuery();
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("something is wrong" + a.ToString());
+                        }
+                    }
+                    conn1.Close();
+                    MessageBox.Show("data inserted");
+                    //end
+                }
+
+            }
+        }
+
+
+
     }
 }

@@ -23,7 +23,7 @@ namespace SEGP
                 command.CommandText = "Delete from students where UoB='" + UoB + "'";
                 command.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Row Deleted");
+                MessageBox.Show("Data Deleted");
             }
             catch(Exception a)
             {
@@ -31,15 +31,33 @@ namespace SEGP
             }
         }
 
+        public void deleterowTeacher(String Name,String FatherName)
+        {
+            try
+            {
+                MySqlCommand command = new MySqlCommand();
+                command = conn.CreateCommand();
+                conn.Open();
+                command.CommandText = "Delete from Teachers where Name='" + Name + "' AND FatherName='"+FatherName+"' ";
+                command.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Data Deleted");
+            }
+            catch (Exception a)
+            {
+                a.ToString();
+            }
+        }
 
-        public void edit(String Uob,String Name,String FName,String Programme,String Email,String Contact,String Year,String oldUob,String oldname)
+
+        public void edit(String Uob,String Name,String FName,String Programme,String Email,String Contact,String PAT,String oldUob,String oldname)
         {
             try
             {
                 MySqlCommand command = new MySqlCommand();
                 conn.Open();
                 command = conn.CreateCommand();
-                command.CommandText = "Update students SET Uob='" + Uob + "',Name='" + Name + "',FatherName='" + FName + "',Programme='" + Programme + "',EmailAddress='" + Email + "',Contact='" + Contact + "',Year='" + Year + "' where UoB='" + oldUob + "' AND Name='" + oldname + "'  ";
+                command.CommandText = "Update students SET Uob='" + Uob + "',Name='" + Name + "',FatherName='" + FName + "',Programme='" + Programme + "',EmailAddress='" + Email + "',Contact='" + Contact + "',PAT='" + PAT + "' where UoB='" + oldUob + "' AND Name='" + oldname + "'  ";
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Updated ");
                 conn.Close();
@@ -49,6 +67,27 @@ namespace SEGP
                 MessageBox.Show("Something is Wrong"+e.ToString());
             }
         }
+
+
+        public void editTeachers(String Name, String FName, String Quali,String Field, String Email, String Contact, String Address,String NOS, String oldName, String oldFname)
+        {
+            try
+            {
+                MySqlCommand command = new MySqlCommand();
+                conn.Open();
+                command = conn.CreateCommand();
+                command.CommandText = "Update Teachers SET Name='" + Name + "',FatherName='" + FName + "',Qualification='"+Quali+"',Field='"+Field+"',EmailAddress='" + Email + "',Contact='" + Contact + "',Address='" + Address + "',NOS='"+NOS+"' where Name='" + oldName + "' AND FatherName='" + oldFname + "'  ";
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Updated ");
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something is Wrong" + e.ToString());
+            }
+        }
+
+
 
     }
 }

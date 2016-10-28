@@ -109,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataOperations.cs" />
+    <Compile Include="Developers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Developers.Designer.cs">
+      <DependentUpon>Developers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="FullLoad.Designer.cs">
       <DependentUpon>FullLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDataManually.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InsertDataManually.Designer.cs">
+      <DependentUpon>InsertDataManually.cs</DependentUpon>
     </Compile>
     <Compile Include="InsertStudents.cs">
       <SubType>UserControl</SubType>
@@ -140,6 +152,12 @@
       <DependentUpon>LoginNaeem.cs</DependentUpon>
     </Compile>
     <Compile Include="MailClass.cs" />
+    <Compile Include="MailGoogle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailGoogle.Designer.cs">
+      <DependentUpon>MailGoogle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartialTeacher.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,11 +213,17 @@
     <Compile Include="Year4.Designer.cs">
       <DependentUpon>Year4.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Developers.resx">
+      <DependentUpon>Developers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FullLoad.resx">
       <DependentUpon>FullLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertDataManually.resx">
+      <DependentUpon>InsertDataManually.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertStudents.resx">
       <DependentUpon>InsertStudents.cs</DependentUpon>
@@ -209,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginNaeem.resx">
       <DependentUpon>LoginNaeem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailGoogle.resx">
+      <DependentUpon>MailGoogle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartialTeacher.resx">
       <DependentUpon>PartialTeacher.cs</DependentUpon>
@@ -275,9 +302,6 @@
     <None Include="Resources\Documents Library.png" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Home.png" />
   </ItemGroup>
   <ItemGroup>
@@ -340,6 +364,46 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jumpshare-_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_grey_192x192.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pin_icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INsert.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

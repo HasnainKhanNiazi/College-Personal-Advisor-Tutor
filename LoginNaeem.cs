@@ -139,6 +139,11 @@ namespace SEGP
             new MailClass("hasikhan144@gmail.com","This is an automated generate email There is no need to reply \n Just copy the given token and paste it in the Password Field and then Reset your password Token='"+randomstring+"'","Reset Your Password");
             
         }
+
+        private void p2_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
        
       
     }

@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace SEGP
 {
@@ -19,12 +20,12 @@ namespace SEGP
         String oldUob, oldname;
         ContextMenu contextmenu = new ContextMenu();
         MenuItem menuMail = new MenuItem("Mail");
-        MenuItem menudelete = new MenuItem("Delete Row");
+        MenuItem menudelete = new MenuItem("Delete Data");
         MenuItem menuPDF = new MenuItem("Generate PDF");
         MenuItem menuedit = new MenuItem("Save Data");
         static String connectionString = "Server=localhost; Database=segp; Uid=root; pwd=";
         MySqlConnection conn = new MySqlConnection(connectionString);
-        String ss = "select * from Students where Year='Year-2'";
+        String ss = "select UoB,Name,FatherName,Programme,EmailAddress,Contact,PAT,Image from Students where Year='Year-2'";
 
         public Year2()
         {
@@ -34,6 +35,7 @@ namespace SEGP
             menudelete.Click += new System.EventHandler(this.menudeleteClick);
             menuedit.Click += new System.EventHandler(this.menueditClick);
             menuPDF.Click += new System.EventHandler(this.menuPDFClick);
+            menuMail.Click += new System.EventHandler(this.menuMailClick);
         }
 
         private void Year2_Load(object sender, EventArgs e)
@@ -56,43 +58,54 @@ namespace SEGP
             }
         }
 
+        private void menuMailClick(object sender, System.EventArgs e)
+        {
+            MailGoogle m = new MailGoogle();
+            System.Data.DataRow row = layoutView1.GetDataRow(layoutView1.FocusedRowHandle);
+            String tomail = row[4].ToString();
+            m.Totxt.Text = tomail;
+            m.Show();
+        }
+
 
         private void menudeleteClick(object sender, System.EventArgs e)
         {
-            System.Data.DataRow row = gridView1y2.GetDataRow(gridView1y2.FocusedRowHandle);
+            System.Data.DataRow row = layoutView1.GetDataRow(layoutView1.FocusedRowHandle);
             String Uob = row[0].ToString();
             DataOperations d = new DataOperations();
             d.deleterow(Uob);
-            gridView1y2.DeleteRow(gridView1y2.FocusedRowHandle);
+            layoutView1.DeleteRow(layoutView1.FocusedRowHandle);
         }
 
 
 
         private void menueditClick(object sender, System.EventArgs e)
         {
-            System.Data.DataRow row = gridView1y2.GetDataRow(gridView1y2.FocusedRowHandle);
+            System.Data.DataRow row = layoutView1.GetDataRow(layoutView1.FocusedRowHandle);
             String Uob = row[0].ToString();
             String Name = row[1].ToString();
             String FName = row[2].ToString();
             String Programme = row[3].ToString();
             String Email = row[4].ToString();
             String Contact = row[5].ToString();
-            String Year = row[6].ToString();
+            String PAT = row[6].ToString();
 
-            DataOperations d = new DataOperations();
-            d.edit(Uob, Name, FName, Programme, Email, Contact, Year, oldUob, oldname);
-        }
+            var validatorUoB = new Regex("^1[0-9]{7}$");
+            var validatorEmail = new Regex("^([a-z]+[0-9]+[@]{1}namal.edu.pk)$");
+            var validatorContact = new Regex("^[0-9]{4}-[0-9]{7}$");
+            var validatorName = new Regex("^[a-zA-Z\\s]+$");
 
-        private void gridView1y2_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
+            if (validatorUoB.IsMatch(Uob) && validatorName.IsMatch(Name) && validatorName.IsMatch(FName) && validatorName.IsMatch(Programme) && validatorEmail.IsMatch(Email) && validatorContact.IsMatch(Contact) && validatorName.IsMatch(PAT))
             {
-                System.Data.DataRow row = gridView1y2.GetDataRow(gridView1y2.FocusedRowHandle);
-                oldUob = row[0].ToString();
-                oldname = row[1].ToString();
-                contextmenu.Show(gggyc2, new Point(e.X, e.Y));
+                DataOperations d = new DataOperations();
+                d.edit(Uob, Name, FName, Programme, Email, Contact, PAT, oldUob, oldname);
+            }
+            else
+            {
+                MessageBox.Show("Your Input Is Not Correct");
             }
         }
+
 
         private void menuPDFClick(object sender, System.EventArgs e)
         {
@@ -126,6 +139,18 @@ namespace SEGP
             doc.Add(table);
             doc.Close();
         }
+
+        private void layoutView1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                System.Data.DataRow row = layoutView1.GetDataRow(layoutView1.FocusedRowHandle);
+                oldUob = row[0].ToString();
+                oldname = row[1].ToString();
+                contextmenu.Show(gggyc2, new Point(e.X, e.Y));
+            }
+        }
+
 
 
     }
