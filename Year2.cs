@@ -95,7 +95,7 @@ namespace SEGP
             var validatorContact = new Regex("^[0-9]{4}-[0-9]{7}$");
             var validatorName = new Regex("^[a-zA-Z\\s]+$");
 
-            if (validatorUoB.IsMatch(Uob) && validatorName.IsMatch(Name) && validatorName.IsMatch(FName) && validatorName.IsMatch(Programme) && validatorEmail.IsMatch(Email) && validatorContact.IsMatch(Contact) && validatorName.IsMatch(PAT))
+            if (validatorUoB.IsMatch(Uob) && validatorEmail.IsMatch(Email) && validatorContact.IsMatch(Contact) && validatorName.IsMatch(Name) && validatorName.IsMatch(FName) && validatorName.IsMatch(PAT))
             {
                 DataOperations d = new DataOperations();
                 d.edit(Uob, Name, FName, Programme, Email, Contact, PAT, oldUob, oldname);

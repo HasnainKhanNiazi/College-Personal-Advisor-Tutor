@@ -54,8 +54,9 @@ namespace SEGP
                     String email = gggbackend.Rows[i].Cells["Email Address"].Value.ToString();
                     String contact = gggbackend.Rows[i].Cells["Contact"].Value.ToString();
                     String Address = gggbackend.Rows[i].Cells["Address"].Value.ToString();
+                    String Status = gggbackend.Rows[i].Cells["Status"].Value.ToString();
 
-                    mysqlcommand.CommandText = "insert into Teachers set Name='" + name + "',Fathername='" + father_name + "',Qualification='" + Qualification + "',Field='" + field + "',Emailaddress = '" + email + "',Contact='" + contact + "',Address='" + Address + "' ";
+                    mysqlcommand.CommandText = "insert into Teachers set Name='" + name + "',Fathername='" + father_name + "',Qualification='" + Qualification + "',Field='" + field + "',Emailaddress = '" + email + "',Contact='" + contact + "',Address='" + Address + "',Status='"+Status+"' ";
                     try
                     {
                         mysqlcommand.ExecuteNonQuery();
@@ -115,8 +116,9 @@ namespace SEGP
                         String email = gggbackend.Rows[i].Cells["Email Address"].Value.ToString();
                         String contact = gggbackend.Rows[i].Cells["Contact"].Value.ToString();
                         String Address = gggbackend.Rows[i].Cells["Address"].Value.ToString();
+                        String Status = gggbackend.Rows[i].Cells["Status"].Value.ToString();
 
-                        mysqlcommand.CommandText = "insert into Teachers set Name='" + name + "',Fathername='" + father_name + "',Qualification='" + Qualification + "',Field='" + field + "',Emailaddress = '" + email + "',Contact='" + contact + "',Address='" + Address + "' ";
+                        mysqlcommand.CommandText = "insert into Teachers set Name='" + name + "',Fathername='" + father_name + "',Qualification='" + Qualification + "',Field='" + field + "',Emailaddress = '" + email + "',Contact='" + contact + "',Address='" + Address + "',Status='"+Status+"' ";
                         try
                         {
                             mysqlcommand.ExecuteNonQuery();

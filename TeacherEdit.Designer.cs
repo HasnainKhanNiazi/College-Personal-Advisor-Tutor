@@ -46,6 +46,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.NOStxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Statustxt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +66,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // fieldtxt
             // 
@@ -116,6 +121,7 @@
             this.Fnametxt.ReadOnly = true;
             this.Fnametxt.Size = new System.Drawing.Size(300, 29);
             this.Fnametxt.TabIndex = 26;
+            this.Fnametxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Fnametxt_KeyPress);
             // 
             // Nametxt
             // 
@@ -128,6 +134,7 @@
             this.Nametxt.ReadOnly = true;
             this.Nametxt.Size = new System.Drawing.Size(300, 29);
             this.Nametxt.TabIndex = 25;
+            this.Nametxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nametxt_KeyPress);
             // 
             // Addresstxt
             // 
@@ -233,30 +240,75 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(300, 20);
-            this.textBox8.Multiline = true;
+            this.textBox8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(594, 19);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(300, 29);
+            this.textBox8.Size = new System.Drawing.Size(300, 23);
             this.textBox8.TabIndex = 34;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(112, 30);
+            this.label7.Location = new System.Drawing.Point(406, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 19);
             this.label7.TabIndex = 34;
             this.label7.Text = "Teacher Name:";
+            // 
+            // NOStxt
+            // 
+            this.NOStxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NOStxt.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NOStxt.Location = new System.Drawing.Point(828, 380);
+            this.NOStxt.Multiline = true;
+            this.NOStxt.Name = "NOStxt";
+            this.NOStxt.Size = new System.Drawing.Size(300, 29);
+            this.NOStxt.TabIndex = 35;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(684, 390);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 19);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Students";
+            // 
+            // Statustxt
+            // 
+            this.Statustxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Statustxt.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Statustxt.Location = new System.Drawing.Point(828, 308);
+            this.Statustxt.Multiline = true;
+            this.Statustxt.Name = "Statustxt";
+            this.Statustxt.Size = new System.Drawing.Size(300, 29);
+            this.Statustxt.TabIndex = 37;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(684, 318);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 19);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Status";
             // 
             // TeacherEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SEGP.Properties.Resources.simple_background_by_hexdef101_d7x7rup;
+            this.Controls.Add(this.Statustxt);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.NOStxt);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fieldtxt);
@@ -302,5 +354,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox NOStxt;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Statustxt;
+        private System.Windows.Forms.Label label10;
     }
 }

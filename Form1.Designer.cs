@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame2 = new DevExpress.XtraEditors.TileItemFrame();
@@ -49,38 +48,48 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame11 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame12 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.windowsUIView1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
-            this.Student_Details_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup(this.components);
-            this.year1Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.year2Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.year3Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.year4Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.tileContainer1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.Student_Details = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.Teacher_Details = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.Teacher_Details_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup(this.components);
-            this.fullLoadDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.partialTeacherDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.Edit_Information = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.EditInfo_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup(this.components);
-            this.studentEditDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.teacherEditDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.InsertData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.InserDataPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup(this.components);
-            this.insertTeachersDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.insertStudentsDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.SendMail = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.MailPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
-            this.sendMailDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.Creditstile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.Credits_P = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
-            this.CreditsDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.PAT = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.Help = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.ChatPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
-            this.insertDataManuallyDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.windowsUIView1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView();
+            this.Student_Details_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup();
+            this.year1Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.year2Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.year3Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.year4Document = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.tileContainer1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.Student_Details = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.Teacher_Details = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.Teacher_Details_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup();
+            this.fullLoadDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.partialTeacherDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.Edit_Information = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.EditInfo_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup();
+            this.studentEditDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.teacherEditDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.InsertData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.InserDataPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup();
+            this.insertDataManuallyDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.insertTeachersDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.insertStudentsDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.SendMail = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.MailPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page();
+            this.sendMailDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.Creditstile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.Credits_P = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page();
+            this.CreditsDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.PAT = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.Help = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.HELP_PG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page();
+            this.helpDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.PATListTile = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.PATLIST_P = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup();
+            this.pATListDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.ChatPG = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page();
+            this.LoadingPAT = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsUIView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Student_Details_PG)).BeginInit();
@@ -100,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherEditDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InsertData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InserDataPG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insertDataManuallyDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insertTeachersDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insertStudentsDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SendMail)).BeginInit();
@@ -110,8 +120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.CreditsDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PAT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Help)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HELP_PG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpDocument)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PATListTile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PATLIST_P)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pATListDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insertDataManuallyDocument)).BeginInit();
             this.SuspendLayout();
             // 
             // documentManager1
@@ -123,6 +137,22 @@
             // 
             // windowsUIView1
             // 
+            this.windowsUIView1.Appearance.Options.UseTextOptions = true;
+            this.windowsUIView1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.windowsUIView1.AppearanceCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.windowsUIView1.AppearanceCaption.BackColor2 = System.Drawing.Color.Teal;
+            this.windowsUIView1.AppearanceCaption.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.windowsUIView1.AppearanceCaption.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windowsUIView1.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.windowsUIView1.AppearanceCaption.Options.UseBackColor = true;
+            this.windowsUIView1.AppearanceCaption.Options.UseBorderColor = true;
+            this.windowsUIView1.AppearanceCaption.Options.UseFont = true;
+            this.windowsUIView1.AppearanceCaption.Options.UseForeColor = true;
+            this.windowsUIView1.AppearanceCaption.Options.UseTextOptions = true;
+            this.windowsUIView1.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.windowsUIView1.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
+            this.windowsUIView1.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.windowsUIView1.Caption = "Namal Personal Academic Advisor";
             this.windowsUIView1.ContentContainers.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.IContentContainer[] {
             this.Student_Details_PG,
             this.Teacher_Details_PG,
@@ -131,7 +161,9 @@
             this.EditInfo_PG,
             this.InserDataPG,
             this.ChatPG,
-            this.Credits_P});
+            this.Credits_P,
+            this.HELP_PG,
+            this.PATLIST_P});
             this.windowsUIView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.year2Document,
             this.year1Document,
@@ -145,7 +177,16 @@
             this.insertTeachersDocument,
             this.insertStudentsDocument,
             this.CreditsDocument,
-            this.insertDataManuallyDocument});
+            this.insertDataManuallyDocument,
+            this.helpDocument,
+            this.pATListDocument});
+            this.windowsUIView1.DocumentSelectorProperties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            this.windowsUIView1.PageGroupProperties.AllowHtmlDrawHeaders = true;
+            this.windowsUIView1.TabbedGroupProperties.AllowHtmlDrawHeaders = true;
+            this.windowsUIView1.TileContainerProperties.AllowGroupHighlighting = true;
+            this.windowsUIView1.TileContainerProperties.AllowItemHover = true;
+            this.windowsUIView1.TileProperties.AllowHtmlDraw = true;
+            this.windowsUIView1.TileProperties.RowCount = 3;
             this.windowsUIView1.Tiles.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile[] {
             this.Student_Details,
             this.Teacher_Details,
@@ -154,10 +195,15 @@
             this.SendMail,
             this.InsertData,
             this.Creditstile,
-            this.PAT});
+            this.PAT,
+            this.PATListTile});
+            this.windowsUIView1.UseLoadingIndicator = DevExpress.Utils.DefaultBoolean.True;
+            this.windowsUIView1.UseSnappingEmulation = DevExpress.Utils.DefaultBoolean.True;
+            this.windowsUIView1.UseTransitionAnimation = DevExpress.Utils.DefaultBoolean.True;
             // 
             // Student_Details_PG
             // 
+            this.Student_Details_PG.Caption = "Students Details";
             this.Student_Details_PG.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
             this.year1Document,
             this.year2Document,
@@ -165,6 +211,7 @@
             this.year4Document});
             this.Student_Details_PG.Name = "Student_Details_PG";
             this.Student_Details_PG.Parent = this.tileContainer1;
+            this.Student_Details_PG.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
             // 
             // year1Document
             // 
@@ -200,7 +247,8 @@
             this.SendMail,
             this.Creditstile,
             this.PAT,
-            this.Help});
+            this.Help,
+            this.PATListTile});
             this.tileContainer1.Name = "tileContainer1";
             this.tileContainer1.Properties.AllowDragTilesBetweenGroups = DevExpress.Utils.DefaultBoolean.True;
             this.tileContainer1.Properties.AllowGroupHighlighting = DevExpress.Utils.DefaultBoolean.True;
@@ -254,11 +302,13 @@
             // 
             // Teacher_Details_PG
             // 
+            this.Teacher_Details_PG.Caption = "Teacher Details";
             this.Teacher_Details_PG.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
             this.fullLoadDocument,
             this.partialTeacherDocument});
             this.Teacher_Details_PG.Name = "Teacher_Details_PG";
             this.Teacher_Details_PG.Parent = this.tileContainer1;
+            this.Teacher_Details_PG.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
             // 
             // fullLoadDocument
             // 
@@ -302,11 +352,13 @@
             // 
             // EditInfo_PG
             // 
+            this.EditInfo_PG.Caption = "Edit Information";
             this.EditInfo_PG.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
             this.studentEditDocument,
             this.teacherEditDocument});
             this.EditInfo_PG.Name = "EditInfo_PG";
             this.EditInfo_PG.Parent = this.tileContainer1;
+            this.EditInfo_PG.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
             // 
             // studentEditDocument
             // 
@@ -350,12 +402,20 @@
             // 
             // InserDataPG
             // 
+            this.InserDataPG.Caption = "Insert Data";
             this.InserDataPG.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
             this.insertDataManuallyDocument,
             this.insertTeachersDocument,
             this.insertStudentsDocument});
             this.InserDataPG.Name = "InserDataPG";
             this.InserDataPG.Parent = this.tileContainer1;
+            this.InserDataPG.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // insertDataManuallyDocument
+            // 
+            this.insertDataManuallyDocument.Caption = "InsertManually";
+            this.insertDataManuallyDocument.ControlName = "InsertDataManually";
+            this.insertDataManuallyDocument.ControlTypeName = "SEGP.InsertDataManually";
             // 
             // insertTeachersDocument
             // 
@@ -397,9 +457,11 @@
             // 
             // MailPG
             // 
+            this.MailPG.Caption = "Send Mail";
             this.MailPG.Document = this.sendMailDocument;
             this.MailPG.Name = "MailPG";
             this.MailPG.Parent = this.tileContainer1;
+            this.MailPG.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
             // 
             // sendMailDocument
             // 
@@ -411,15 +473,25 @@
             // 
             this.Creditstile.ActivationTarget = this.Credits_P;
             this.Creditstile.Document = this.CreditsDocument;
+            tileItemFrame9.Appearance.BackColor = System.Drawing.Color.Black;
+            tileItemFrame9.Appearance.Options.UseBackColor = true;
+            tileItemElement9.Image = global::SEGP.Properties.Resources.Credits;
+            tileItemElement9.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement9.Text = "";
+            tileItemFrame9.Elements.Add(tileItemElement9);
+            tileItemFrame9.Image = global::SEGP.Properties.Resources.Credits;
+            this.Creditstile.Frames.Add(tileItemFrame9);
             this.tileContainer1.SetID(this.Creditstile, 6);
             this.Creditstile.Name = "Creditstile";
             this.Creditstile.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             // 
             // Credits_P
             // 
+            this.Credits_P.Caption = "Credits";
             this.Credits_P.Document = this.CreditsDocument;
             this.Credits_P.Name = "Credits_P";
             this.Credits_P.Parent = this.tileContainer1;
+            this.Credits_P.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
             // 
             // CreditsDocument
             // 
@@ -428,10 +500,15 @@
             // 
             // PAT
             // 
-            tileItemElement9.Text = "<b>PAT Assign</b>";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemFrame9.Elements.Add(tileItemElement9);
-            this.PAT.Frames.Add(tileItemFrame9);
+            tileItemFrame10.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
+            tileItemFrame10.Appearance.Options.UseBackColor = true;
+            tileItemElement10.Image = global::SEGP.Properties.Resources.PAT_List;
+            tileItemElement10.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement10.Text = "<b>Assign PAT</b>";
+            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame10.Elements.Add(tileItemElement10);
+            tileItemFrame10.Image = global::SEGP.Properties.Resources.PAT_List;
+            this.PAT.Frames.Add(tileItemFrame10);
             this.tileContainer1.SetID(this.PAT, 7);
             this.PAT.Name = "PAT";
             this.PAT.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
@@ -440,23 +517,70 @@
             // 
             // Help
             // 
+            this.Help.ActivationTarget = this.HELP_PG;
             this.Help.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(88)))), ((int)(((byte)(183)))));
             this.Help.Appearances.Normal.Options.UseBackColor = true;
-            tileItemFrame10.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(88)))), ((int)(((byte)(183)))));
-            tileItemFrame10.Appearance.Options.UseBackColor = true;
-            tileItemElement10.Image = global::SEGP.Properties.Resources.Help;
-            tileItemElement10.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement10.Text = "<b>Help</b>";
-            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            tileItemFrame10.Elements.Add(tileItemElement10);
-            tileItemFrame10.Image = global::SEGP.Properties.Resources.Help;
-            this.Help.Frames.Add(tileItemFrame10);
+            tileItemFrame11.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(88)))), ((int)(((byte)(183)))));
+            tileItemFrame11.Appearance.Options.UseBackColor = true;
+            tileItemElement11.Image = global::SEGP.Properties.Resources.Help;
+            tileItemElement11.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement11.Text = "<b>Help</b>";
+            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame11.Elements.Add(tileItemElement11);
+            tileItemFrame11.Image = global::SEGP.Properties.Resources.Help;
+            this.Help.Frames.Add(tileItemFrame11);
             this.tileContainer1.SetID(this.Help, 2);
             this.Help.Name = "Help";
             this.Help.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
             this.Help.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.Help.Visible = true;
-            this.Help.Click += new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileClickEventHandler(this.Help_Click);
+            // 
+            // HELP_PG
+            // 
+            this.HELP_PG.Caption = "Help";
+            this.HELP_PG.Document = this.helpDocument;
+            this.HELP_PG.Name = "HELP_PG";
+            this.HELP_PG.Parent = this.tileContainer1;
+            this.HELP_PG.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // helpDocument
+            // 
+            this.helpDocument.Caption = "Help";
+            this.helpDocument.ControlName = "Help";
+            this.helpDocument.ControlTypeName = "SEGP.Help";
+            // 
+            // PATListTile
+            // 
+            this.PATListTile.ActivationTarget = this.PATLIST_P;
+            this.PATListTile.Document = this.pATListDocument;
+            tileItemFrame12.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(113)))), ((int)(((byte)(69)))));
+            tileItemFrame12.Appearance.Options.UseBackColor = true;
+            tileItemElement12.Image = global::SEGP.Properties.Resources.Excel_2013;
+            tileItemElement12.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement12.Text = "<b> PAT List</b>";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            tileItemFrame12.Elements.Add(tileItemElement12);
+            tileItemFrame12.Image = global::SEGP.Properties.Resources.Excel_2013;
+            this.PATListTile.Frames.Add(tileItemFrame12);
+            this.tileContainer1.SetID(this.PATListTile, 8);
+            this.PATListTile.Name = "PATListTile";
+            this.PATListTile.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            this.PATListTile.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
+            // 
+            // PATLIST_P
+            // 
+            this.PATLIST_P.Caption = "List Of PAT";
+            this.PATLIST_P.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document[] {
+            this.pATListDocument});
+            this.PATLIST_P.Name = "PATLIST_P";
+            this.PATLIST_P.Parent = this.tileContainer1;
+            this.PATLIST_P.Properties.ShowCaption = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // pATListDocument
+            // 
+            this.pATListDocument.Caption = "PATList";
+            this.pATListDocument.ControlName = "PATList";
+            this.pATListDocument.ControlTypeName = "SEGP.PATList";
             // 
             // ChatPG
             // 
@@ -464,11 +588,12 @@
             this.ChatPG.Name = "ChatPG";
             this.ChatPG.Parent = this.tileContainer1;
             // 
-            // insertDataManuallyDocument
+            // LoadingPAT
             // 
-            this.insertDataManuallyDocument.Caption = "InsertManually";
-            this.insertDataManuallyDocument.ControlName = "InsertDataManually";
-            this.insertDataManuallyDocument.ControlTypeName = "SEGP.InsertDataManually";
+            this.LoadingPAT.Location = new System.Drawing.Point(542, 230);
+            this.LoadingPAT.Name = "LoadingPAT";
+            this.LoadingPAT.Size = new System.Drawing.Size(200, 100);
+            this.LoadingPAT.TabIndex = 2;
             // 
             // Form1
             // 
@@ -476,7 +601,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.ClientSize = new System.Drawing.Size(924, 465);
+            this.ClientSize = new System.Drawing.Size(1284, 561);
+            this.Controls.Add(this.LoadingPAT);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Namal";
@@ -501,6 +627,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherEditDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InsertData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InserDataPG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insertDataManuallyDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insertTeachersDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insertStudentsDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SendMail)).EndInit();
@@ -511,8 +638,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.CreditsDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PAT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Help)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HELP_PG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helpDocument)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PATListTile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PATLIST_P)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pATListDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insertDataManuallyDocument)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,6 +681,12 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document CreditsDocument;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile PAT;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document insertDataManuallyDocument;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page HELP_PG;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document helpDocument;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile PATListTile;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup PATLIST_P;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document pATListDocument;
+        private System.Windows.Forms.Panel LoadingPAT;
 
     }
 }

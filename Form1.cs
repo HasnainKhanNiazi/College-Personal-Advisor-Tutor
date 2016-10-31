@@ -21,7 +21,6 @@ namespace SEGP
         int k;
         int count = 1;
         int countTeahers = 1;
-        List<String> st_list = new List<String>();
 
         public Form1()
         {
@@ -58,9 +57,12 @@ namespace SEGP
                 e.Control = new SEGP.InsertTeachers();
             if (e.Document == CreditsDocument)
                 e.Control = new SEGP.Developers();
+            if (e.Document == helpDocument)
+                e.Control = new SEGP.Help();
             if (e.Document == insertDataManuallyDocument)
                 e.Control = new SEGP.InsertDataManually();
-
+            if (e.Document == pATListDocument)
+                e.Control = new SEGP.PATList();
             if (e.Control == null)
                 e.Control = new System.Windows.Forms.Control();
         }
@@ -120,57 +122,43 @@ namespace SEGP
         {
             NOTMethod();
             conn.Close();
+
             for (int i = 1; i <= NOT; i++)
             {
                 TeacherMethod();
-                if (Status.Equals("P"))
+                conn.Close();
+
+                if(Status == "P")
                 {
                     k = 4;
                 }
-                else if (Status.Equals("F"))
+                else if (Status == "F")
                 {
                     k = 8;
                 }
-                int nn = Convert.ToInt32(NOS);
-                if (nn != k)
+                for (int j = 1; j <= k; j++)
                 {
-                    for (int j = 1; j <= k; j++)
-                    {
-                        MySqlCommand command = new MySqlCommand();
-                        conn.Open();
-                        command = conn.CreateCommand();
-                        command.CommandText = "select * from students where ID='" + count + "' ";
-                        MySqlDataReader reader = command.ExecuteReader();
-                        reader.Read();
-                        String UOB = reader.GetString(1);
-                        String PAT = reader.GetString(8);
-                        reader.Close();
-                        conn.Close();
-                        if (PAT.Equals("Not Assigned"))
-                        {
-                            conn.Open();
-                            command.CommandText = "UPDATE students SET PAT='" + TName + "' where UoB='" + UOB + "' ";
-                            command.ExecuteNonQuery();
-                            command.CommandText = "UPDATE Teachers SET NOS=" + k + " where ID='" + ID + "' ";
-                            command.ExecuteNonQuery();
-                            count++;
-                            conn.Close();
-                        }
-                    }
+                    MySqlCommand command = new MySqlCommand();
+                    conn.Open();
+                    command = conn.CreateCommand();
+                    command.CommandText = "select * from students where ID='" + count + "' ";
+                    MySqlDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    String UOB = reader.GetString(1);
+                    String PAT = reader.GetString(9);
+                    reader.Close();
+                    command.CommandText = "UPDATE students SET PAT='" + TName + "' where UoB='" + UOB + "' ";
+                    command.ExecuteNonQuery();
+                    command.CommandText = "UPDATE Teachers SET NOS=" + j + " where ID='" + ID + "' ";
+                    command.ExecuteNonQuery();
+                    count++;
+                    conn.Close();
                 }
-
             }
+            MessageBox.Show("Data Inserted");
 
 
 
-        }
-
-        
-
-        private void Help_Click(object sender, DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileClickEventArgs e)
-        {
-            MailGoogle m = new MailGoogle();
-            m.Show();
         }
 
 
